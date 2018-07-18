@@ -1,0 +1,83 @@
+import java.io.*;
+import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class MainProyectoS {
+  
+ private static BufferedReader stdIn=new
+     BufferedReader (new InputStreamReader(System.in));
+ private static PrintWriter stdOut=new
+     PrintWriter (System.out,true);
+ 
+ //IDEAS
+ //Buscar medicinas (avanzado: por tags, ie. nombre, caducidad, etc)
+ //Mostrar medicinas por caducar en X tiempo (3 botones [semana, mes, a–o] y un ComboBox)
+ //Actualizacion dinamica de fecha (feb -> 28)
+ //Filter options (sort por fecha, nombre, etc.)
+ //Gray text al agregar medicina con ejemplos
+ //Construir TableRenderer para compactar codigo y eliminar selection border
+ 
+ //IDEAS PARA PANEL DE CONFIGURACION
+ //Meses en texto
+ //Tama–o de datos (strings)
+ //Colores
+ //Desabilitar ventana mostrarCaducos por default
+ 
+ //USER COMMENTS
+ //Caducidad > Fecha de caducidad
+ //Caduco > checkmarks y tachas
+ //Ventana m‡s grande
+ 
+ //COMPLICACION
+ //Crear archivo de excel con datos
+ //Contactos de doctor
+ //Registro de consultas
+ //Relaci—n entre todas las clases
+ //Search con sugerencias por letras
+ //Graficar uso de medicinas
+ //Menu principal que lleve a los dem‡s
+ 
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+ //INICIALIZAR PROYECTO
+ public MainProyectoS(){
+   JFrame f = new JFrame();
+   f.setSize(630,395);
+   f.setBackground(new Color(23, 127, 179));
+   f.setLocationRelativeTo(null);
+   f.setLayout(new FlowLayout());
+   f.setTitle("Inventario Medicina");
+   f.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE); //Permite cerrado seguro
+   f.addWindowListener(new WindowAdapter(){
+      public void windowClosing(WindowEvent we){
+        String seguroOpt[] = {"Si", "No"};
+        int seguroResp = JOptionPane.showOptionDialog(null, "ÀSeguro que quieres salir?", "Aviso", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, null, seguroOpt, seguroOpt[1]);
+        if (seguroResp == 0){
+          try{ FrameMainS.escribirMedArchivo(FrameMainS.getMedList()); }
+          catch (IOException e) {};
+          System.exit(0);
+        }
+       }
+     }
+     );
+   
+   JTabbedPane jtp = new JTabbedPane();
+   
+   f.add(jtp);
+   jtp.add("Inventario Medicinas", new FrameMainS());
+   /*
+   jtp.add("Doctores", new JPanel());
+   jtp.add("Consultas MŽdicas", new JPanel());
+   jtp.add("Configuraci—n", new JPanel());
+   */
+   
+   f.setVisible(true);
+   FrameMainS.checarCad2(Calendar.getInstance(), true);
+ }
+  
+ public static void main (String[ ] args) throws IOException {
+   MainProyectoS p = new MainProyectoS();
+ }
+
+}

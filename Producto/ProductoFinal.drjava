@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20140826-r5761">
+  <project autorefresh="false" main="MainProyectoS" manifest="" root="" work="">
+    <createjar file="ProductoFinal" flags="7"/>
+    <source>
+      <file active="true" name="FrameAgregarS.java" package="" timestamp="19-Oct-2016 22:30:20">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="FrameMainS.java" package="" timestamp="27-Oct-2016 14:21:14">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="MainProyectoS.java" package="" timestamp="10-Oct-2016 00:34:34">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="MedicinaS.java" package="" timestamp="19-Oct-2016 18:35:40">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="MyButtonRendererS.java" package="" timestamp="19-Oct-2016 21:08:57">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="TableModelCustomS.java" package="" timestamp="20-Sep-2016 10:01:18">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="MyButtonEditorS.java" package="" timestamp="19-Oct-2016 18:40:39">
+        <select from="0" to="0"/>
+        <scroll column="0" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>
